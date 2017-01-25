@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:background="#DFDFDD">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CFCFCC">
+
+        <TextView
+            android:text="Player 1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/player_name"
+            android:layout_weight="1"
+            android:textColor="#333"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Life: "
+            android:layout_width="0dp"
+            android:layout_weight=".20"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:padding="12dp"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight=".80"
+            android:layout_margin="12dp"
+
+            android:layout_height="match_parent"
+            android:background="@drawable/border">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/blood_remaining"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:background="#F00">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/blood_lost"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.0">
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/health_fraction"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="20 / 20"
+                android:textColor="#000"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonPanel">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="-5"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="-1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="+1"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:text="+5"/>
+
+    </LinearLayout>
+</LinearLayout>
